@@ -41,7 +41,7 @@ import io.jettra.server.core.JettraContext;
 @Page(path = "/person")
 public class PersonPage extends TemplatePage {
 
-    @InjectProperties(name = "messages")
+    @InjectProperties(name = "messages-MiPluginTest")
     private Properties msg;
 
     /**
