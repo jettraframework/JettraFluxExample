@@ -20,7 +20,7 @@ import io.jettra.flux.sync.SyncType;
 import java.util.Map;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role={"ADMIN","MANAGER"}, department="") 
+@PageWidgetAllow(role={jcf.AppRole.ADMIN, jcf.AppRole.MANAGER}) 
 @io.jettra.core.server.Page(path = "/forms")
 public class FormsPage extends TemplatePage {
 
@@ -29,7 +29,7 @@ public class FormsPage extends TemplatePage {
         return "Forms - JettraFlux Pro";
     }
 
-    @ActionWidgetAllow(role={"ADMIN","MANAGER"})
+    @ActionWidgetAllow(role={jcf.AppRole.ADMIN, jcf.AppRole.MANAGER})
     private void saveForm(HttpExchange exchange, Map<String, String> params) {
        IO.println("Formulario recibido con datos (Método de acción seguro): " + params);
         io.jettra.flux.sync.JettraSyncManager.notifyChange("FormsModel", io.jettra.flux.sync.SyncType.UPDATE, getLoggedUser(exchange));

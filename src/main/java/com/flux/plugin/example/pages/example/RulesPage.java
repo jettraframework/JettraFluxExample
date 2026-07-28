@@ -6,7 +6,7 @@ import io.jettra.flux.sync.JettraPageSincronized;
 import io.jettra.flux.sync.SyncType;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER" }, department = "")
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER })
 @Page(path = "/rules")
 public class RulesPage extends ReglasPage {
 

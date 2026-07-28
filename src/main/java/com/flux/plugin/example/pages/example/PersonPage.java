@@ -37,7 +37,7 @@ import io.jettra.flux.widgets.Text;
 import io.jettra.server.core.JettraContext;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER" }, department = "")
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER })
 @Page(path = "/person")
 public class PersonPage extends TemplatePage {
 
@@ -56,7 +56,7 @@ public class PersonPage extends TemplatePage {
         return msg.getProperty("personpage.title");
     }
 
-    @ActionWidgetAllow(role = { "ADMIN", "MANAGER" })
+    @ActionWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER })
     private void saveForm(HttpExchange exchange, Map<String, String> params) {
     
         IO.println("Formulario recibido con datos (Método de acción seguro): " + params);

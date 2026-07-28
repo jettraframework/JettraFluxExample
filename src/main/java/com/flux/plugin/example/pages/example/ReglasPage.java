@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.Properties;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER" }, department = "")
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER }, department = "")
 @Page(path = "/reglas")
 public class ReglasPage extends TemplatePage {
 
@@ -40,7 +40,7 @@ public class ReglasPage extends TemplatePage {
         return msg != null ? msg.getProperty("title.reglas", "JettraRules Management") : "JettraRules Management";
     }
 
-    @ActionWidgetAllow(role = { "ADMIN", "MANAGER" })
+    @ActionWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER })
     private void saveForm(HttpExchange exchange, Map<String, String> params) {
         // Backend Java method-level binding, compute & validation
         List<RuleResult> results = new FluxBinder(reglasModel)

@@ -15,7 +15,7 @@ import io.jettra.flux.widgets.Paragraph;
 import java.util.Map;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role={"ADMIN", "MANAGER"}, department="")
+@PageWidgetAllow(role={"ADMIN", "MANAGER"})
 public class CardDemoPage extends FluxBaseHandler {
 
     @Override

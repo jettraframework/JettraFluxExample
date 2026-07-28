@@ -20,7 +20,7 @@ import io.jettra.flux.sync.SyncType;
 import java.util.Map;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role={"ADMIN","MANAGER"}, department="") 
+@PageWidgetAllow(role={"ADMIN","MANAGER"}) 
 @io.jettra.core.server.Page(path = "/forms")
 public class FormsPage extends TemplatePage {
 

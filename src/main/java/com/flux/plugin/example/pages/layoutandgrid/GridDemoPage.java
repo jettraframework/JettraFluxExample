@@ -14,7 +14,7 @@ import java.util.Map;
 import com.flux.example.pages.template.TemplatePage;
 import io.jettra.core.server.Page;
 
-@PageWidgetAllow(role={"ADMIN", "MANAGER", "USER"}, department="")
+@PageWidgetAllow(role={jcf.AppRole.ADMIN, jcf.AppRole.MANAGER, jcf.AppRole.USER})
 @Page(path = "/grid-demo")
 public class GridDemoPage extends TemplatePage {
 

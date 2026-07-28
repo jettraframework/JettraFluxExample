@@ -19,7 +19,7 @@ import io.jettra.flux.sync.SyncType;
 import io.jettra.server.JettraServer;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER", "USER" })
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER, jcf.AppRole.USER })
 @Page(path = "/button-demo")
 public class ButtonDemoPage extends TemplatePage {
 
@@ -98,7 +98,7 @@ public class ButtonDemoPage extends TemplatePage {
         ).modifier(new io.jettra.flux.core.Modifier().style("width: 100%; align-items: stretch; max-width: 1200px; padding: 20px;"));
     }
 
-    @ActionWidgetAllow(role = { "ADMIN", "MANAGER" }, department = "")
+    @ActionWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER }, department = "")
     public void secureAction(HttpExchange exchange, Map<String, String> params) {
         try {
             redirect(exchange, "/button-demo?showModal=true");

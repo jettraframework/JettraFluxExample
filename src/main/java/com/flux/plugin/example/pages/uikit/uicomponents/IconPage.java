@@ -22,7 +22,7 @@ import io.jettra.flux.widgets.Icon;
  * @author avbravo
  */
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER", "USER" })
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER, jcf.AppRole.USER })
 @io.jettra.core.server.Page(path = "/icon")
 public class IconPage extends TemplatePage{
 

@@ -15,7 +15,7 @@ import io.jettra.flux.widgets.Paragraph;
 import java.util.Map;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER", "USER" })
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER, jcf.AppRole.USER })
 @Page(path = "/card-demo")
 public class CardDemoPage  extends TemplatePage {
 

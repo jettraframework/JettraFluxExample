@@ -13,7 +13,7 @@ import io.jettra.flux.sync.JettraPageSincronized;
 import io.jettra.flux.sync.SyncType;
 
 @JettraPageSincronized(SyncType.ALL)
-@PageWidgetAllow(role = { "ADMIN", "MANAGER", "USER" })
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER, jcf.AppRole.USER })
 @io.jettra.core.server.Page(path = "/message")
 public class MessagePage extends TemplatePage {
 
