@@ -35,7 +35,9 @@ public class LoginPage extends FluxBaseHandler {
             return true;
         }
         if (isValidUser(user, pass)) {
-            CredentialFlux credentialFlux = new CredentialFlux(user, user + "Prueba", "ADMIN", "", "");
+            String role = user.equals("demo")?"DEMO":"ADMIN";
+//            CredentialFlux credentialFlux = new CredentialFlux(user, user + "Prueba", "ADMIN", "", "");
+            CredentialFlux credentialFlux = new CredentialFlux(user, user + "Prueba", role, "", "");
             io.jettra.server.core.JettraContext.getCurrent().set(io.jettra.server.core.JettraContext.Scope.SESSION, "credentialFlux", credentialFlux);
             setSessionCookie(exchange, user, credentialFlux.role(), credentialFlux.department());
             redirect(exchange, "/dashboard");
