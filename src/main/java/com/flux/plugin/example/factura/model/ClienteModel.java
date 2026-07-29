@@ -2,7 +2,6 @@ package com.flux.plugin.example.factura.model;
 
 import com.flux.plugin.example.factura.entity.Cliente;
 import io.jettra.flux.annotations.JettraViewModel;
-import io.jettra.core.flux.FluxModelToRecordConversor;
 import io.jettra.flux.annotations.PropertiesInRecord;
 import io.jettra.flux.annotations.PropertiesLabel;
 import io.jettra.flux.annotations.ViewSelectOne;
@@ -11,7 +10,6 @@ import io.jettra.flux.annotations.TableColumnField;
 import io.jettra.rules.validations.NotNull;
 
 @JettraViewModel
-@FluxModelToRecordConversor(goal = Cliente.class)
 public class ClienteModel {
 
     @PropertiesInRecord

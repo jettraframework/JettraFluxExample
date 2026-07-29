@@ -1,7 +1,7 @@
 package com.flux.plugin.example.factura.services;
 
 import com.flux.plugin.example.factura.entity.Cliente;
-import com.flux.plugin.example.factura.model.ClienteModelConversor;
+import com.flux.plugin.example.factura.converter.ClienteModelConversor;
 import com.flux.plugin.example.factura.restclient.ClienteRestClient;
 import io.jettra.core.inject.annotation.Inject;
 import java.util.List;
