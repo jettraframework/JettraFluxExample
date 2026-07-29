@@ -1,43 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.flux.plugin.example.model;
 
 import com.flux.plugin.example.entity.Person;
-import io.jettra.core.flux.FluxModelToRecordConversor;
 import io.jettra.flux.annotations.JettraViewModel;
+import io.jettra.core.flux.FluxModelToRecordConversor;
+import io.jettra.flux.annotations.PropertiesInRecord;
 import io.jettra.flux.annotations.PropertiesLabel;
-import io.jettra.rules.validations.Email;
+import io.jettra.flux.annotations.ViewSelectOne;
+import io.jettra.flux.annotations.ViewSelectMany;
+import io.jettra.flux.annotations.TableColumnField;
+import io.jettra.rules.validations.NotNull;
 import io.jettra.rules.validations.Min;
 import io.jettra.rules.validations.NotNull;
 
-/**
- *
- * @author avbravo
- */
 @JettraViewModel
 @FluxModelToRecordConversor(goal = Person.class)
 public class PersonModel {
 
+    @PropertiesInRecord
+    @PropertiesLabel(value = "person.name", label = "Name")
     @NotNull
-    @PropertiesLabel(value = "person.name", label = "Nombre")
-    public String name = "name";
-    @Email
+    private String name;
+
+    @PropertiesInRecord
     @PropertiesLabel(value = "person.email", label = "Email")
-    public String email = "email";
-    @Min(value = 0)
-    @PropertiesLabel(value = "person.age", label = "Edad")
-    public Integer age = 0;
+    @NotNull
+    private String email;
 
-    public PersonModel() {
-    }
+    @PropertiesInRecord
+    @PropertiesLabel(value = "person.age", label = "Age")
+    private Integer age;
 
-    public PersonModel(String name, String email, Integer age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-    }
+    public PersonModel() {}
 
     public String getName() {
         return name;
