@@ -97,6 +97,11 @@
                             <artifactId>JettraAnnotation</artifactId>
                             <version>${jettra.annotation.version}</version>
                         </path>
+                        <path>
+                            <groupId>io.jettra</groupId>
+                            <artifactId>JettraFlux</artifactId>
+                            <version>${jettra.flux.version}</version>
+                        </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>

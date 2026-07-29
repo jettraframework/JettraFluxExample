@@ -1,6 +1,7 @@
 package com.flux.plugin.example.pages.example;
 
 import com.flux.plugin.example.model.PersonModel;
+import com.flux.plugin.example.model.PersonModelConversor;
 import com.flux.example.pages.template.TemplatePage;
 import io.jettra.flux.widgets.Column;
 import io.jettra.flux.widgets.Card;
@@ -12,6 +13,7 @@ import io.jettra.flux.widgets.Header;
 import io.jettra.flux.widgets.Label;
 
 import com.sun.net.httpserver.HttpExchange;
+import io.jettra.core.inject.annotation.Inject;
 import io.jettra.core.inject.annotation.InjectProperties;
 import io.jettra.flux.core.Widget;
 import io.jettra.server.JettraServer;
@@ -44,6 +46,9 @@ public class PersonPage extends TemplatePage {
     @InjectProperties(name = "messages")
     private Properties msg;
 
+    @Inject
+    PersonModelConversor personModelConversor;
+    
     /**
      * Model
      */
@@ -61,6 +66,8 @@ public class PersonPage extends TemplatePage {
     
         IO.println("Formulario recibido con datos (Método de acción seguro): " + params);
 
+       
+        
         List<RuleResult> results = new FluxBinder(personModel)
                 .messages(msg)
                 .bind(params)
@@ -68,6 +75,7 @@ public class PersonPage extends TemplatePage {
                 .validate();
 
         IO.print("--> personModel " + personModel.toString() + " " + personModel.getName());
+         IO.println("Conversor to Record"+ personModelConversor.toRecord(personModel).toString());
        IO.println("results --> "+results);
         boolean hasErrors = false;
         StringBuilder errorMsg = new StringBuilder();

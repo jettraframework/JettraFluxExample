@@ -4,6 +4,8 @@
  */
 package com.flux.plugin.example.model;
 
+import com.flux.plugin.example.entity.Person;
+import io.jettra.core.flux.FluxModelToRecordConversor;
 import io.jettra.flux.annotations.JettraViewModel;
 import io.jettra.flux.annotations.PropertiesLabel;
 import io.jettra.rules.validations.Email;
@@ -15,6 +17,7 @@ import io.jettra.rules.validations.NotNull;
  * @author avbravo
  */
 @JettraViewModel
+@FluxModelToRecordConversor(goal = Person.class)
 public class PersonModel {
 
     @NotNull
