@@ -12,7 +12,6 @@ import io.jettra.flux.widgets.Header;
 import io.jettra.flux.widgets.Label;
 
 import com.sun.net.httpserver.HttpExchange;
-import io.jettra.core.inject.annotation.Inject;
 import io.jettra.core.inject.annotation.InjectProperties;
 import io.jettra.flux.core.Widget;
 import io.jettra.server.JettraServer;
@@ -45,8 +44,8 @@ public class PersonPage extends TemplatePage {
     @InjectProperties(name = "messages")
     private Properties msg;
 
-   @Inject
-    PersonModelConverter personModelConverter;
+//   @Inject
+//    PersonModelConverter personModelConverter;
     
     /**
      * Model
@@ -75,7 +74,7 @@ public class PersonPage extends TemplatePage {
 
         IO.print("--> personModel " + personModel.toString() + " " + personModel.getName());
         
-        IO.println("Conversor to Record"+ personModelConverter.toRecord(personModel).toString());
+//        IO.println("Conversor to Record"+ personModelConverter.toRecord(personModel).toString());
          
        IO.println("results --> "+results);
         boolean hasErrors = false;

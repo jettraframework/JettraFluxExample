@@ -4,6 +4,7 @@
  */
 package com.flux.plugin.example.entity;
 
+import io.jettra.rules.validations.Email;
 import io.jettra.rules.validations.Min;
 import io.jettra.rules.validations.NotNull;
 
@@ -11,6 +12,9 @@ import io.jettra.rules.validations.NotNull;
  *
  * @author avbravo
  */
-public record Person(@NotNull String name, String email,@Min(value = 0) Integer age) {
+public record Person(@NotNull
+        String name, @Email
+        String email, @Min(value = 0)
+        Integer age) {
 
 }

@@ -7,7 +7,7 @@ import io.jettra.rules.validations.Min;
 import io.jettra.rules.validations.NotNull;
 
 @ApplicationScoped
-public class PersonModelConversor {
+public class PersonModelConverter {
   public PersonModel toModel(Person record) {
     if (record == null) {
       return null;

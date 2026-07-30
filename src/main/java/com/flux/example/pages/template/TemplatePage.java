@@ -96,6 +96,7 @@ public abstract class TemplatePage extends FluxBaseHandler {
 // Example
         WidgetLet exampleMenu = WidgetLet.of("Example").icon(Icon.COG);
         exampleMenu.add(WidgetLet.of("Person").icon(Icon.CHART_LINE).url(JettraServer.resolvePath("/person")));
+        exampleMenu.add(WidgetLet.of("PersonCrud").icon(Icon.CHART_LINE).url(JettraServer.resolvePath("/person-crud")));
         exampleMenu.add(WidgetLet.of("Reglas").icon(Icon.RECEIPT).url(JettraServer.resolvePath("/reglas")));
 
         // Apps

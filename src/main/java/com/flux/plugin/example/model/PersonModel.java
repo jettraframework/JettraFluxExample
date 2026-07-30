@@ -1,13 +1,9 @@
 package com.flux.plugin.example.model;
 
-import com.flux.plugin.example.entity.Person;
 import io.jettra.flux.annotations.JettraViewModel;
 import io.jettra.flux.annotations.PropertiesInRecord;
 import io.jettra.flux.annotations.PropertiesLabel;
-import io.jettra.flux.annotations.ViewSelectOne;
-import io.jettra.flux.annotations.ViewSelectMany;
-import io.jettra.flux.annotations.TableColumnField;
-import io.jettra.rules.validations.NotNull;
+import io.jettra.rules.validations.Email;
 import io.jettra.rules.validations.Min;
 import io.jettra.rules.validations.NotNull;
 
@@ -22,10 +18,12 @@ public class PersonModel {
     @PropertiesInRecord
     @PropertiesLabel(value = "person.email", label = "Email")
     @NotNull
+    @Email
     private String email;
 
     @PropertiesInRecord
     @PropertiesLabel(value = "person.age", label = "Age")
+    @Min(value = 0, message = "La edad no puede ser negativa")
     private Integer age;
 
     public PersonModel() {}

@@ -41,11 +41,7 @@
             <version>${jettra.appserver.version}</version>
         </dependency>
         
-<!--        <dependency>
-            <groupId>io.jettra</groupId>
-            <artifactId>JettraWUI</artifactId>
-            <version>${jettra.wui.version}</version>
-        </dependency>-->
+
         <dependency>
             <groupId>io.jettra</groupId>
             <artifactId>JettraReport</artifactId>
