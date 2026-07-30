@@ -26,15 +26,19 @@ import io.jettra.flux.core.Widget;
 import io.jettra.core.server.Page;
 import io.jettra.flux.core.Modifier;
 import io.jettra.core.inject.annotation.Inject;
+import io.jettra.core.security.widget.PageWidgetAllow;
 import io.jettra.server.JettraServer;
 import io.jettra.flux.binding.FluxBinder;
+import io.jettra.flux.sync.JettraPageSincronized;
+import io.jettra.flux.sync.SyncType;
 import io.jettra.rules.core.RuleResult;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+@JettraPageSincronized(SyncType.ALL)
+@PageWidgetAllow(role = { jcf.AppRole.ADMIN, jcf.AppRole.MANAGER })
 @Page(path = "/person-crud")
 public class PersonCrudPage extends com.flux.example.pages.template.TemplatePage {
 
