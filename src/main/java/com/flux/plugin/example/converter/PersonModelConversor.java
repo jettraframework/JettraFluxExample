@@ -3,6 +3,8 @@ package com.flux.plugin.example.converter;
 import com.flux.plugin.example.entity.Person;
 import com.flux.plugin.example.model.PersonModel;
 import io.jettra.scoped.ApplicationScoped;
+import io.jettra.rules.validations.Min;
+import io.jettra.rules.validations.NotNull;
 
 @ApplicationScoped
 public class PersonModelConversor {

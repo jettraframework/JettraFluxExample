@@ -1,7 +1,6 @@
 package com.flux.plugin.example.pages.example;
 
 import com.flux.plugin.example.model.PersonModel;
-import com.flux.plugin.example.model.PersonModelConversor;
 import com.flux.example.pages.template.TemplatePage;
 import io.jettra.flux.widgets.Column;
 import io.jettra.flux.widgets.Card;
@@ -46,8 +45,8 @@ public class PersonPage extends TemplatePage {
     @InjectProperties(name = "messages")
     private Properties msg;
 
-    @Inject
-    PersonModelConversor personModelConversor;
+   @Inject
+    PersonModelConverter personModelConverter;
     
     /**
      * Model
@@ -75,7 +74,9 @@ public class PersonPage extends TemplatePage {
                 .validate();
 
         IO.print("--> personModel " + personModel.toString() + " " + personModel.getName());
-         IO.println("Conversor to Record"+ personModelConversor.toRecord(personModel).toString());
+        
+        IO.println("Conversor to Record"+ personModelConverter.toRecord(personModel).toString());
+         
        IO.println("results --> "+results);
         boolean hasErrors = false;
         StringBuilder errorMsg = new StringBuilder();

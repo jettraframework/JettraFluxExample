@@ -9,6 +9,8 @@ import io.jettra.rest.annotations.Path;
 import io.jettra.rest.annotations.PathParam;
 import io.jettra.rest.client.RestClient;
 import java.util.List;
+import io.jettra.rules.validations.Min;
+import io.jettra.rules.validations.NotNull;
 
 @RestClient(baseUri = "/api/example/persons")
 public interface PersonRestClient {

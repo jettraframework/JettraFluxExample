@@ -2,7 +2,6 @@ package com.flux.plugin.example.factura.model;
 
 import com.flux.plugin.example.factura.entity.Cotizacion;
 import io.jettra.flux.annotations.JettraViewModel;
-import io.jettra.core.flux.FluxModelToRecordConversor;
 import io.jettra.flux.annotations.PropertiesInRecord;
 import io.jettra.flux.annotations.PropertiesLabel;
 import io.jettra.flux.annotations.ViewSelectOne;
@@ -17,7 +16,6 @@ import com.flux.plugin.example.factura.entity.ItemDetalle;
 import com.flux.plugin.example.factura.entity.EstadoCotizacion;
 
 @JettraViewModel
-@FluxModelToRecordConversor(goal = Cotizacion.class)
 public class CotizacionModel {
 
     @PropertiesInRecord
@@ -27,12 +25,10 @@ public class CotizacionModel {
 
     @PropertiesInRecord
     @PropertiesLabel(value = "cotizacion.fechaEmision", label = "FechaEmision")
-    @ViewSelectOne(label = "name", source = "com.flux.plugin.example.factura.services.LocalDateService", method = "findAll")
     private LocalDate fechaEmision;
 
     @PropertiesInRecord
     @PropertiesLabel(value = "cotizacion.fechaVencimiento", label = "FechaVencimiento")
-    @ViewSelectOne(label = "name", source = "com.flux.plugin.example.factura.services.LocalDateService", method = "findAll")
     private LocalDate fechaVencimiento;
 
     @PropertiesInRecord
