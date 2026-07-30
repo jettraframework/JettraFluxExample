@@ -13,18 +13,17 @@ import io.jettra.rest.annotations.PathParam;
 import io.jettra.rest.annotations.QueryParam;
 import io.jettra.rest.annotations.Produces;
 import io.jettra.rest.annotations.Secured;
-import io.jettra.rest.annotations.accreditation.DeclareRoles;
 import io.jettra.rest.annotations.accreditation.RolesAllowed;
 import io.jettra.rest.core.Response;
 import io.jettra.server.discoverer.Discovered;
 import io.jettra.server.openapi.annotations.OpenApi;
 import io.jettra.server.openapi.annotations.Operation;
+import jcf.systemRole;
 import java.util.List;
 
 @Secured
 @Path("/plugin/example/person")
-@DeclareRoles({"ADMIN", "MANAGER"})
-@RolesAllowed({"ADMIN"})
+@RolesAllowed({systemRole.ADMIN})
 @Discovered
 @OpenApi(title = "Person", version = "v1.0", description = "API for Person management")
 public class PersonController {
