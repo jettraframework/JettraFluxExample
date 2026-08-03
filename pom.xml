@@ -12,28 +12,23 @@
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
+        <main.class.path>com.flux.example.App</main.class.path>
+        <!-- Versions-->
+        <jettra.appserver.version>1.0.0-SNAPSHOT</jettra.appserver.version>
         <jettra.annotation.version>1.0.0-SNAPSHOT</jettra.annotation.version>
         <jettra.jwt.version>1.0.0-SNAPSHOT</jettra.jwt.version>
         <jettra.gprc.version>1.0.0-SNAPSHOT</jettra.gprc.version>
         <jettra.rules.version>1.0.0-SNAPSHOT</jettra.rules.version>
-        <jettra.appserver.version>1.0.0-SNAPSHOT</jettra.appserver.version>
-<!--        <jettra.wui.version>1.0.0-SNAPSHOT</jettra.wui.version>-->
+
         <jettra.report.version>1.0.0-SNAPSHOT</jettra.report.version>
         <jettra.rest.version>1.0.0-SNAPSHOT</jettra.rest.version>
         <jettra.json.version>1.0.0-SNAPSHOT</jettra.json.version>
         <jettra.test.version>1.0.0-SNAPSHOT</jettra.test.version>
         <jettra.flux.version>1.0.0-SNAPSHOT</jettra.flux.version>
-        <main.class.path>com.flux.example.App</main.class.path>
+
     </properties>
 
     <dependencies>
-        <!-- JSON parsing -->
-        <dependency>
-            <groupId>io.jettra</groupId>
-            <artifactId>JettraJSON</artifactId>
-            <version>${jettra.json.version}</version>
- 
-        </dependency>
         <!-- Servidor backend subyacente -->
         <dependency>
             <groupId>io.jettra</groupId>
@@ -41,6 +36,14 @@
             <version>${jettra.appserver.version}</version>
         </dependency>
         
+        <!-- JSON parsing -->
+        <dependency>
+            <groupId>io.jettra</groupId>
+            <artifactId>JettraJSON</artifactId>
+            <version>${jettra.json.version}</version>
+ 
+        </dependency>
+    
 
         <dependency>
             <groupId>io.jettra</groupId>
@@ -163,11 +166,11 @@
             </plugin>
         </plugins>
     </build>
-    	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 </project>
