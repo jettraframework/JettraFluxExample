@@ -80,6 +80,11 @@
             <artifactId>JettraFlux</artifactId>
             <version>${jettra.flux.version}</version>
         </dependency>
+<!--        <dependency>
+            <groupId>com.jettra.theme</groupId>
+            <artifactId>skyred</artifactId>
+            <version>1.0.0</version>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>
