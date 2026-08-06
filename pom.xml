@@ -85,12 +85,12 @@
             <artifactId>skyred</artifactId>
             <version>1.0.0</version>
         </dependency>-->
-<!--      <dependency>
+<!--    <dependency>
             <groupId>io.jettra.theme</groupId>
             <artifactId>traditional</artifactId>
             <version>1.0.0</version>
         </dependency>-->
-<!--      <dependency>
+<!--    <dependency>
             <groupId>io.jettra.theme</groupId>
             <artifactId>adminlte</artifactId>
             <version>1.0.0</version>
