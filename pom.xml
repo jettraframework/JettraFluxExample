@@ -100,14 +100,22 @@
             <artifactId>Metropolis</artifactId>
             <version>1.0.0</version>
         </dependency>
+        
+        <dependency>
+	    <groupId>com.github.jettraframework</groupId>
+	    <artifactId>Bit</artifactId>
+	    <version>1.0.0</version>
+	</dependency>
+        
         <dependency>
             <groupId>io.jettra.theme</groupId>
             <artifactId>tail</artifactId>
             <version>1.0.0</version>
         </dependency>
+    
         <dependency>
             <groupId>io.jettra.theme</groupId>
-            <artifactId>bit</artifactId>
+            <artifactId>admin</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>
