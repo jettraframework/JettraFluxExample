@@ -80,12 +80,7 @@ public abstract class TemplatePage extends FluxBaseHandler {
             }
         }
 
-        Widget customCss;
-        if (currentTheme != null && (currentTheme.equalsIgnoreCase("Retro") || currentTheme.equalsIgnoreCase("RetroTheme"))) {
-            customCss = Paragraph.of(io.jettra.flux.theme.RetroTheme.Template.CustomCSS + "\n" + io.jettra.flux.theme.RetroTheme.Template.CustomJS);
-        } else {
-            customCss = Paragraph.of(io.jettra.flux.theme.OceanTheme.Template.CustomCSS + "\n" + io.jettra.flux.theme.OceanTheme.Template.CustomJS);
-        }
+        Widget customCss = Paragraph.of(io.jettra.flux.theme.OceanTheme.Template.CustomCSS + "\n" + io.jettra.flux.theme.OceanTheme.Template.CustomJS);
 
         
         // Menu
