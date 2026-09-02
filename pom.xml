@@ -112,12 +112,12 @@
             <artifactId>tail</artifactId>
             <version>1.0.0</version>
         </dependency>
-    
+<!--    
         <dependency>
             <groupId>io.jettra.theme</groupId>
             <artifactId>admin</artifactId>
             <version>1.0.0</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>

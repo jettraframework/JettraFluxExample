@@ -21,7 +21,12 @@ public class DashboardPage extends TemplatePage {
     @Override
     protected Widget buildCenter(HttpExchange exchange, Map<String, String> params, String currentTheme) {
         
-        Widget customCss = Paragraph.of(CustomCSS);
+        Widget customCss;
+        if (currentTheme != null && (currentTheme.equalsIgnoreCase("Retro") || currentTheme.equalsIgnoreCase("RetroTheme"))) {
+            customCss = Paragraph.of(io.jettra.flux.theme.RetroTheme.DashboardPage.CustomCSS);
+        } else {
+            customCss = Paragraph.of(CustomCSS);
+        }
 
         // --- Stats Row ---
         Widget stat1 = io.jettra.flux.widgets.StatCard.of("Conversion Rate", "0.8%", "0.81%", false);
