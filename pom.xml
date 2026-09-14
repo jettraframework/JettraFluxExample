@@ -21,7 +21,6 @@
         <jettra.rules.version>1.0.0-SNAPSHOT</jettra.rules.version>
 
         <jettra.report.version>1.0.0-SNAPSHOT</jettra.report.version>
-        <jettra.rest.version>1.0.0-SNAPSHOT</jettra.rest.version>
         <jettra.json.version>1.0.0-SNAPSHOT</jettra.json.version>
         <jettra.test.version>1.0.0-SNAPSHOT</jettra.test.version>
         <jettra.flux.version>1.0.0-SNAPSHOT</jettra.flux.version>
@@ -59,11 +58,6 @@
             <groupId>io.jettra</groupId>
             <artifactId>JettraJWT</artifactId>
             <version>${jettra.jwt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jettra</groupId>
-            <artifactId>JettraRest</artifactId>
-            <version>${jettra.rest.version}</version>
         </dependency>
         <dependency>
             <groupId>io.jettra</groupId>
