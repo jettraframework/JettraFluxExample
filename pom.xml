@@ -14,7 +14,7 @@
         <skipTests>true</skipTests>
         <main.class.path>com.flux.example.App</main.class.path>
         <!-- Versions-->
-        <jettra.appserver.version>1.0.0-SNAPSHOT</jettra.appserver.version>
+        <jettra.ee.version>1.0.0-SNAPSHOT</jettra.ee.version>
         <jettra.annotation.version>1.0.0-SNAPSHOT</jettra.annotation.version>
         <jettra.jwt.version>1.0.0-SNAPSHOT</jettra.jwt.version>
         <jettra.gprc.version>1.0.0-SNAPSHOT</jettra.gprc.version>
@@ -32,8 +32,8 @@
         <!-- Servidor backend subyacente -->
         <dependency>
             <groupId>io.jettra</groupId>
-            <artifactId>JettraAppServer</artifactId>
-            <version>${jettra.appserver.version}</version>
+            <artifactId>JettraEE</artifactId>
+            <version>${jettra.ee.version}</version>
         </dependency>
         
         <!-- JSON parsing -->
