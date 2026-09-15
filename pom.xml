@@ -15,14 +15,14 @@
         <main.class.path>com.flux.example.App</main.class.path>
         <!-- Versions-->
         <jettra.ee.version>1.0.0-SNAPSHOT</jettra.ee.version>
-        <jettra.annotation.version>1.0.0-SNAPSHOT</jettra.annotation.version>
-        <jettra.jwt.version>1.0.0-SNAPSHOT</jettra.jwt.version>
-        <jettra.gprc.version>1.0.0-SNAPSHOT</jettra.gprc.version>
-        <jettra.rules.version>1.0.0-SNAPSHOT</jettra.rules.version>
+        <jettra.annotation.version>1.0.0</jettra.annotation.version>
+        <jettra.jwt.version>1.0.0</jettra.jwt.version>
+        <jettra.gprc.version>1.0.0</jettra.gprc.version>
+        <jettra.rules.version>1.0.0</jettra.rules.version>
 
         <jettra.report.version>1.0.0-SNAPSHOT</jettra.report.version>
-        <jettra.json.version>1.0.0-SNAPSHOT</jettra.json.version>
-        <jettra.test.version>1.0.0-SNAPSHOT</jettra.test.version>
+        <jettra.json.version>1.0.0</jettra.json.version>
+        <jettra.test.version>1.0.0</jettra.test.version>
         <jettra.flux.version>1.0.0-SNAPSHOT</jettra.flux.version>
 
     </properties>
@@ -37,7 +37,7 @@
         
         <!-- JSON parsing -->
         <dependency>
-            <groupId>io.jettra</groupId>
+         <groupId>com.github.jettraframework</groupId>
             <artifactId>JettraJSON</artifactId>
             <version>${jettra.json.version}</version>
  
@@ -50,22 +50,22 @@
             <version>${jettra.report.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.jettra</groupId>
+           <groupId>com.github.jettraframework</groupId>
             <artifactId>JettraRules</artifactId>
             <version>${jettra.rules.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.jettra</groupId>
+    <groupId>com.github.jettraframework</groupId>
             <artifactId>JettraJWT</artifactId>
             <version>${jettra.jwt.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.jettra</groupId>
+            <groupId>com.github.jettraframework</groupId>
             <artifactId>JettraAnnotation</artifactId>
             <version>${jettra.annotation.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.jettra</groupId>
+          <groupId>com.github.jettraframework</groupId>
             <artifactId>JettraTest</artifactId>
             <version>${jettra.test.version}</version>
         </dependency>
@@ -74,21 +74,7 @@
             <artifactId>JettraFlux</artifactId>
             <version>${jettra.flux.version}</version>
         </dependency>
-        <!--        <dependency>
-            <groupId>com.jettra.theme</groupId>
-            <artifactId>skyred</artifactId>
-            <version>1.0.0</version>
-        </dependency>-->
-<!--    <dependency>
-            <groupId>io.jettra.theme</groupId>
-            <artifactId>traditional</artifactId>
-            <version>1.0.0</version>
-        </dependency>-->
-<!--    <dependency>
-            <groupId>io.jettra.theme</groupId>
-            <artifactId>adminlte</artifactId>
-            <version>1.0.0</version>
-        </dependency>-->
+
         <dependency>
             <groupId>com.github.jettraframework</groupId>
             <artifactId>Metropolis</artifactId>
@@ -96,17 +82,17 @@
         </dependency>
         
         <dependency>
-	    <groupId>com.github.jettraframework</groupId>
-	    <artifactId>Bit</artifactId>
-	    <version>1.0.0</version>
-	</dependency>
+            <groupId>com.github.jettraframework</groupId>
+            <artifactId>Bit</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         
         <dependency>
             <groupId>io.jettra.theme</groupId>
             <artifactId>tail</artifactId>
             <version>1.0.0</version>
         </dependency>
-<!--    
+        <!--    
         <dependency>
             <groupId>io.jettra.theme</groupId>
             <artifactId>admin</artifactId>
